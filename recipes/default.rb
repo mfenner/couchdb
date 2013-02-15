@@ -35,7 +35,7 @@ when "rhel"
     system true
   end
 
-  include_recipe "yum::epel"
+  include_recipe "yum::epel" if node['couch_db']['add_epel_repo']
 end
 
 
